@@ -1,41 +1,41 @@
 package ifrn.pi.eventos.models;
 
 public class Evento {
-	private String Nome;
-	private String Local;
-	private String Data;
-	private String Horario;
+	private String nome;
+	private String local;
+	private String data;
+	private String horario;
 
 	public String getNome() {
-		return Nome;
+		return nome;
 	}
 
 	public void setNome(String nome) {
-		Nome = nome;
+		this.nome = nome;
 	}
 
 	public String getLocal() {
-		return Local;
+		return local;
 	}
 
 	public void setLocal(String local) {
-		Local = local;
+		this.local = local;
 	}
 
 	public String getData() {
-		return Data;
+		return data;
 	}
 
 	public void setData(String data) {
-		Data = data;
+		this.data = data;
 	}
 
 	public String getHorario() {
-		return Horario;
+		return horario;
 	}
 
 	public void setHorario(String horario) {
-		Horario = horario;
+		this.horario = horario;
 	}
 
 }
