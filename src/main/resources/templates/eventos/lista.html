@@ -20,7 +20,7 @@
 			<thead>
 				<tr>
 					<th>id</th>
-					<th>Nome do evento</th>
+					<th>Nome</th>
 					<th>Local</th>
 					<th>Data</th>
 					<th>Horario</th>
@@ -29,13 +29,15 @@
 			</thead>
 			<tbody>
 				<tr th:each="e : ${eventos}">
-					<td><a th:href=" @{/eventos/{id}(id=${e.id})}"> <span
-							th:tex="${e.id}">Aniversario de João</span></a></td>
-					<td th:text="${e.nome}"></td>
+					<td th:text="${e.id}"></td>
+					<td><a th:href=" @{/eventos/{id}(id=${e.id})}"> <span th:text= "${e.nome}">Aniversario de João</span></a></td>
 					<td th:text="${e.local}"></td>
 					<td th:text="${e.data}"></td>
 					<td th:text="${e.horario}"></td>
-					<td><a th:href="@{/eventos/{id}/remover(id=${e.id})}"><i class="material-icons">delete</i></a></td>
+					<td>
+					<a th:href="@{/eventos/{id}/selecionar(id=${e.id})}"><i class="material-icons">edit</i></a>
+					
+					<a th:href="@{/eventos/{id}/remover(id=${e.id})}"><i class="material-icons">delete</i></a></td>
 				</tr>
 			</tbody>
 		</table>
